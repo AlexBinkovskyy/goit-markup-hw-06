@@ -299,9 +299,9 @@ header .container {
   align-items: center;
 }
 
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 427.98px) {
   .hero-section  {
-    max-width: 428;
+    max-width: 428px;
     padding: 112px 0;
   }
 }
