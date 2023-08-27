@@ -299,12 +299,18 @@ header .container {
   align-items: center;
 }
 
-@media screen and (max-width: 427.98px) {
+@media screen and (max-width: 428px) {
   .hero-section  {
     max-width: 428px;
     padding: 112px 0;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .hero-section {
+    padding: 112px 0;
+  }
+  }
 
 
 
@@ -342,8 +348,16 @@ header .container {
 /*  */
 
 .benefits-section {
-  padding: 120px 0;
+  padding: 96px 0;
 }
+
+@media screen and (min-width: 1200px) {
+  .benefits-section {
+  padding: 120px 0; 
+  }
+}
+
+
 
 .benefits .title-third {
   font-size: 36px;
@@ -469,6 +483,14 @@ header .container {
   background-color: var(--cloud);
 }
 
+
+@media screen and (max-width: 768px) {
+  .our-team {
+    padding: 96px 0;
+    }
+}
+
+
 .container.team .title-second {
   margin-bottom: 72px;
 }
@@ -490,6 +512,16 @@ header .container {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+@media screen and (min-width: 320px) {
+  .team-list-item {
+    width: 264px;
+    row-gap: 72px;
+  }
+  .container.team .list {
+    row-gap: 72px;
+  }
 }
 
 .team-card-content {
@@ -561,6 +593,36 @@ header .container {
   height: 88px;
 }
 
+
+
+@media screen and  (max-width: 767.98px) {
+  .costumers .list {
+    justify-content: center;
+       --listeditems: 2;
+       row-gap: 72px;
+       column-gap: 16px; 
+  }
+  .costumers-list-item {
+    width: 190px;
+  }
+  .costumers {
+    padding: 96px 0 96px 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .costumers .list {
+    justify-content: center;
+       --listeditems: 3;
+       row-gap: 72px;
+       column-gap: 16px; 
+  }
+  .costumers {
+    padding: 96px 0 96px 0;
+  }
+}
+
+
 .costumers-list-item .link {
   width: 100%;
   display: flex;
@@ -595,11 +657,13 @@ header .container {
   color: var(--cloud);
   line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
+  width: 268px;
+  margin-bottom: 72px;
 }
 
 .footer {
   background-color: var(--navyblue);
-  padding: 100px 0;
+  padding: 98px 0;
 }
 
 .footer .link.logo {
@@ -610,10 +674,8 @@ header .container {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-}
+  margin-top: 0;
 
-.footer-text {
-  width: 264px;
 }
 
 .footer .link {
@@ -622,21 +684,27 @@ header .container {
 }
 
 .container-socials {
-  margin-right: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 72px;
 }
 
 .footer .body-medium {
   color: var(--white);
   margin-bottom: 16px;
-}
+  }
 
-.footer .container {
+/* .footer .container {
   display: flex;
   align-items: baseline;
-}
+} */
 
 .container-box {
-  margin-right: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .footer .list {
@@ -672,6 +740,9 @@ header .container {
 /* Subscribe Section */
 
 .subscribe-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
 }
 
@@ -680,12 +751,14 @@ header .container {
 }
 
 .subscribe-form {
+  width: 100%;
   display: flex;
+  flex-direction: column;
   gap: var(--listed-gap);
 }
 
 .subscribe-email {
-  width: 264px;
+  width: 100%;
   height: 40px;
   color: var(--white);
   font-size: 12px;
@@ -714,6 +787,7 @@ header .container {
   line-height: 1.5; /* 150% */
   letter-spacing: 0.04em;
   padding: 8px 24px;
+  margin: 0 auto;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   transition: background-color var(--transition-settings);
@@ -1105,7 +1179,6 @@ header .container {
   padding: 32px;
   background-color: #3f51b5;
   z-index: 999;
-
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
 }
