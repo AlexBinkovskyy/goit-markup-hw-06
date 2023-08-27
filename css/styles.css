@@ -71,13 +71,15 @@ body {
 
 .container {
   min-width: 320px;
-  max-width: 428px;
+  max-width: 427.98px;
   margin: 0 auto;
   padding: 0 16px;
+  width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .container {
+    max-width: 768px;
   }
 }
 
@@ -310,21 +312,26 @@ header .container {
 }
 
 .benefits .title-third {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  text-transform: capitalize;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .benefits-text {
-  display: block;
   color: var(--slate);
-  line-height: 1.5; /* 150% */
+  font-weight: 500;
+  line-height: 1.5;
   letter-spacing: 0.02em;
 }
 
 .benefits.container .list {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  --listeditems: 4;
-  gap: var(--listed-gap);
+  row-gap: calc(var(--listed-gap) * 3);
 }
 
 .benefits.container {
@@ -333,10 +340,39 @@ header .container {
   align-items: center;
 }
 
-.benefits-item {
-  width: calc(
-    (100% - var(--listed-gap) * (var(--listeditems) - 1)) / var(--listeditems)
-  );
+@media screen and (min-width: 768px) {
+  .benefits.container .list {
+    --listeditems: 2;
+    column-gap: var(--listed-gap);
+  }
+
+  .benefits-item {
+    width: calc(
+      (100% - var(--listed-gap) * (var(--listeditems) - 1)) / var(--listeditems)
+    );
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .benefits.container .list {
+    --listeditems: 4;
+  }
+
+  .benefits-item {
+    width: calc(
+      (100% - var(--listed-gap) * (var(--listeditems) - 1)) / var(--listeditems)
+    );
+  }
+
+  .benefits .title-third {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  .benefits-text {
+    font-weight: 400;
+  }
 }
 
 .benefits-icons {
@@ -349,6 +385,12 @@ header .container {
   margin-bottom: 8px;
 }
 
+@media screen and (max-width: 1199.98px) {
+  .benefits-icons {
+    display: none;
+  }
+}
+
 /*  */
 /*  */
 /* What are we doing */
@@ -357,6 +399,12 @@ header .container {
 
 .what-a-w-doing {
   padding-bottom: 120px;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .what-a-w-doing {
+    display: none;
+  }
 }
 
 .container.activities .title-second {
