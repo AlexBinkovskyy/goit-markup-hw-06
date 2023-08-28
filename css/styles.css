@@ -1226,18 +1226,26 @@ header .container {
 */
 
 .menu-toggle {
-  min-height: 22px;
-  min-width: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 0;
   background-color: transparent;
   cursor: pointer;
-  border: none;
-  border-radius: 50%;
   outline: none;
+}
+
+.mobile-btn.modal-btn-ico {
+  --color1: var(--cornflower);
+  --color2: var(--navyblue);
+  --color3: var(--navyblue);
+}
+
+.mobile-btn.modal-btn-ico:hover,
+.mobile-btn.modal-btn-ico:focus {
+  --color1: var(--ocean);
+  --color2: var(--navyblue);
+  --color3: var(--cornflower);
 }
 
 @media only screen and (min-width: 768px) {
@@ -1252,7 +1260,7 @@ header .container {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 32px;
+  padding: 40px;
   background-color: var(--white);
   z-index: 999;
   transform: translateX(100%);
@@ -1275,8 +1283,6 @@ header .container {
 }
 
 .mobile-menu {
-  padding: 0;
-  margin: 0;
   list-style: none;
 }
 
@@ -1295,5 +1301,10 @@ header .container {
 
 .mobile-menu .link:hover,
 .mobile-menu .link:active {
-  color: var(--ocean, #404bbf);
+  color: var(--ocean);
 }
+
+.mobile-menu .mobile-menu-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+.menu-container:nth-child(n-1)
